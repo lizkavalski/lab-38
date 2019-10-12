@@ -1,15 +1,18 @@
-import Auth from '../auth/auth.js';
 import React, { useContext, useState } from 'react';
+import { SettingsContext } from '../../context/settings.js';
 import { Unless, When } from '../if/';
 import {connect} from 'react-redux'
+import Auth from '../auth/auth.js';
+
 import * as actions from '../../store/todo.store.js';
 
 const TodoList = (props) => {
 
   const [page, setPage] = useState(0);
+  const context = useContext(SettingsContext);
 
-  const start = props.settings.maxVisible * page;
-  const end = start + props.settings.maxVisible;
+  const start = context.maxVisible * page;
+  const end = start + context.maxVisible;
 
   const list = props.list ? props.list.slice(start, end) : [];
 
