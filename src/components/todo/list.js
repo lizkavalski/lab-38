@@ -20,7 +20,7 @@ const TodoList = (props) => {
     <>
       <ul>
         {list.map(item => (
-          <Unless condition={item.complete && !props.settings.showCompleted}>
+          // <Unless condition={item.complete && !props.settings.toggleCompleted}>
             <li
               className={`complete-${item.complete.toString()}`}
               key={item._id}
@@ -35,7 +35,7 @@ const TodoList = (props) => {
                   Delete
                 </button>
             </li>
-          </Unless>
+          // </Unless>
         ))}
       </ul>
 
