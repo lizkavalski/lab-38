@@ -5,42 +5,31 @@
 ### Author: Liz Kavalski
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
-
-#### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [style guide](http://xyz.com) (React assignments)
+* [submission PR](https://github.com/lizkavalski/lab-38/pull/2)
+* [back-end](https://api-js401.herokuapp.com/api/v1/todo/schema') (class-backend)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+#### `todo.js`
+Renders the the form and the list
+#### `form.js`
+Renders a form for the user to fill. Also sends the data to the server 
+#### `list.js`
+Render the list from the server
+#### `./store/index.js`
+The entery point for the store
+#### `todo.store.js`
+Contains the `actions` and the `reducer`. Based on the action that is given the reducer will change the current state.
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+REACT_APP_API= a link to the backend
+REACT_APP_SECRET= make up your own
+REACT_APP_Q_SERVER= a link to the q server
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* login in by typeing editor/EDITOR
+
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+No tests
